@@ -1,1 +1,1 @@
-# Z-klady-PYTHON
+# Zaklady-PYTHON
