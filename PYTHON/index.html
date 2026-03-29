@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python pre začiatočníkov</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Python pre začiatočníkov</h1>
+      <p>Stránka na učenie Pythonu s inštaláciou, základmi, vstavanými modulmi a 30 otázkovým testom.</p>
+      <nav>
+        <a href="#install">Inštalácia</a>
+        <a href="#basics">Základy</a>
+        <a href="#modules">Moduly</a>
+        <a href="#quiz">Test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="install" class="section">
+      <h2>1. Inštalácia VS Code</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Windows</h3>
+          <ol>
+            <li>Stiahni si VS Code z <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>.</li>
+            <li>Spusti inštalátor a vyber &quot;Add to PATH&quot;.</li>
+            <li>Nainštaluj rozšírenie <strong>Python</strong> od Microsoft.</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3>Linux</h3>
+          <ol>
+            <li>Inštaluj pomocou balíčka pre distribúciu alebo Snap: <code>sudo snap install --classic code</code>.</li>
+            <li>Otvor VS Code a nainštaluj rozšírenie <strong>Python</strong>.</li>
+            <li>Skontroluj Python: <code>python3 --version</code>.</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3>iPad</h3>
+          <ol>
+            <li>Stiahni appku VS Code z App Store (ak je k dispozícii) alebo alternativu ako <strong>Pyto</strong>.</li>
+            <li>Použi cloudové služby, napr. GitHub Codespaces alebo VS Code Web.</li>
+            <li>Pracuj s jednoduchými skriptmi a ukladanie na cloud.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="basics" class="section">
+      <h2>2. Základy Python</h2>
+      <article class="card">
+        <h3>Prvý program</h3>
+        <p>Najjednoduchší Python program vypíše text na obrazovku.</p>
+        <pre><code>print("Ahoj, Python!")</code></pre>
+      </article>
+      <article class="card">
+        <h3>Premenné a dátové typy</h3>
+        <p>Python používa premenné bez explicitného typu.</p>
+        <pre><code>meno = "Anna"
+vek = 25
+vyska = 1.72
+je_programator = True
+print(meno, vek, vyska, je_programator)</code></pre>
+      </article>
+      <article class="card">
+        <h3>Základné príkazy</h3>
+        <p>Podmienky, cykly a funkcie takto vyzerajú v Pythone.</p>
+        <pre><code>cislo = 10
+if cislo > 5:
+    print("Veľké číslo")
+else:
+    print("Malé číslo")
+
+for i in range(3):
+    print(i)
+
+while cislo > 0:
+    print(cislo)
+    cislo -= 1
+
+
+def pozdrav(meno):
+    return f"Ahoj, {meno}!"
+
+print(pozdrav("Marek"))</code></pre>
+      </article>
+      <article class="card">
+        <h3>Funkcie a moduly</h3>
+        <p>Funkcie pomáhajú organizovať opakujúci sa kód.</p>
+        <pre><code>import math
+
+def obvod_kruhu(r):
+    return 2 * math.pi * r
+
+print(obvod_kruhu(5))</code></pre>
+      </article>
+    </section>
+
+    <section id="modules" class="section">
+      <h2>3. Vstavané moduly</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>math</h3>
+          <p>Matematické funkcie a konštanty.</p>
+          <pre><code>import math
+print(math.sqrt(16))
+print(math.pi)</code></pre>
+        </article>
+        <article class="card">
+          <h3>os</h3>
+          <p>Práca so súborovým systémom.</p>
+          <pre><code>import os
+print(os.getcwd())
+print(os.listdir('.'))</code></pre>
+        </article>
+        <article class="card">
+          <h3>sys</h3>
+          <p>Integrácia s interpreterom Pythonu.</p>
+          <pre><code>import sys
+print(sys.version)
+print(sys.platform)</code></pre>
+        </article>
+        <article class="card">
+          <h3>random</h3>
+          <p>Generovanie náhodných čísel.</p>
+          <pre><code>import random
+print(random.randint(1, 10))
+print(random.choice(["jablko", "banán", "hruška"]))</code></pre>
+        </article>
+        <article class="card">
+          <h3>datetime</h3>
+          <p>Práca s dátumom a časom.</p>
+          <pre><code>from datetime import datetime
+now = datetime.now()
+print(now.strftime("%Y-%m-%d %H:%M:%S"))</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <h2>4. Krátky test (30 otázok)</h2>
+      <p>Vyber správnu odpoveď a zisti svoje skóre.</p>
+      <form id="quizForm"></form>
+      <button id="submitQuiz" class="button">Vyhodnotiť test</button>
+      <div id="quizResult" class="result"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Python web učebnica – jednoduchý sprievodca pre začiatočníkov.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
